@@ -1,0 +1,11 @@
+<div class="card">
+  <h2><%= @list.name %></h2>
+  <% @list.bookmarks.each do |bookmark| %>
+  <div class="card">
+    <p><%= bookmark.movie.title %></p>
+    <p><%= bookmark.comment %></p>
+    <%= button_to "Remove", bookmark_path(bookmark), method: :delete %>
+  </div>
+<% end %>
+
+</div>
